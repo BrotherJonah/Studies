@@ -128,6 +128,6 @@ int main() {
 	Gerwazy.spij();
 	Gerwazy.miaucz();
 
-	cout << "\n\n";
+	cout << "\n\n KONIEC";
 	return 0;
 }
