@@ -1,0 +1,3 @@
+﻿  ConsoleApplication2.cpp
+D:\0Repozytoria\Studies\Programowanie_obiektowe_I\TestPracyC2\ConsoleApplication2\ConsoleApplication2.cpp(236): warning C4715: 'zapisz': not all control paths return a value
+  ConsoleApplication2.vcxproj -> D:\0Repozytoria\Studies\Programowanie_obiektowe_I\TestPracyC2\ConsoleApplication2\x64\Debug\ConsoleApplication2.exe
