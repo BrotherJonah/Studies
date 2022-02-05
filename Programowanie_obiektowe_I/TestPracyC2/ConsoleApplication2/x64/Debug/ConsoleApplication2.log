@@ -1,3 +1,4 @@
 ﻿  ConsoleApplication2.cpp
-D:\0Repozytoria\Studies\Programowanie_obiektowe_I\TestPracyC2\ConsoleApplication2\ConsoleApplication2.cpp(236): warning C4715: 'zapisz': not all control paths return a value
-  ConsoleApplication2.vcxproj -> D:\0Repozytoria\Studies\Programowanie_obiektowe_I\TestPracyC2\ConsoleApplication2\x64\Debug\ConsoleApplication2.exe
+D:\0Repozytoria\Studies\Programowanie_obiektowe_I\TestPracyC2\ConsoleApplication2\ConsoleApplication2.cpp(168,11): error C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+D:\0Repozytoria\Studies\Programowanie_obiektowe_I\TestPracyC2\ConsoleApplication2\ConsoleApplication2.cpp(151,13): warning C4101: 'res': unreferenced local variable
+D:\0Repozytoria\Studies\Programowanie_obiektowe_I\TestPracyC2\ConsoleApplication2\ConsoleApplication2.cpp(152,6): warning C4101: 'index': unreferenced local variable
