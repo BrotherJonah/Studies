@@ -13,7 +13,7 @@ Two-way binding, połączenie event i property binding.
 [nameOfPropetyBinding] - property binding
 [(nameOfDirective)] - two-way binding, połączenie event i property binding - następuje akcja event i bierząco zmienia informacje wraz z wysyłaniem ich do użytkownika
 
-Używam na tym etapie wszystkich 4 sposobów data binding:
+4 sposoby data binding:
 event - listen to the click,
 string interpolation - output data,
 property - enable button after time,
@@ -22,7 +22,15 @@ two-way - fetch output data.
 Dyrektywy @Directive - dodaje je po to żeby kontrolować kiedy coś ma się zadziać. Np.: *ngIf - jeśli chcę kontrolowac w jakim stanie ma się coś zadziać - mogę używać w przypadku zmiennych albo metod, które zwracają true or false.
 Typowe dyrektywy, są wywoływane poprzez selektory (podobnie jak @component) i istnieje kilka rodzajów ich wywołań (jak w przykładach succes and warning alert).
 Komponenty, są specjalnymi dyrektywami.
-*ngIf - to dyrektywa strukturalna, gwiazdki używam odwołując się do dyrektyw strukturalnych (zmieniających strukturę DOM). Zmiana struktury DOM dokonuje się w sposób dynamiczny. Np.: Elementu strony nie ma, lecz po wykonaniu jakiejś akcji, zostaje utworzony element.
+Są różne typy tyrektyw:
+- Structural directives: wprowadzają zmiany w strukturę DOM (dodają, usuwają elementy)
+*ngIf - to dyrektywa strukturalna, gwiazdki używam odwołując się do dyrektyw strukturalnych. Zmiana struktury DOM dokonuje się w sposób dynamiczny. Np.: Elementu strony nie ma, lecz po wykonaniu jakiejś akcji, zostaje utworzony element.
+- Attribute directives: nie wprowadzją zmian w DOM, wyłącznie zmieniają elementy, które już istnieją. Odwołuje się do nich bez użycia *.
+[ngStyle] - pozwala na dynamiczną zmianę wartości selektorów CSS
+[ngFor] - pozwala na
+[ngClass] - pozwala na dynamiczne dodawanie bądź usuwanie klas CSS
+
+
 -->
 
 
@@ -43,12 +51,9 @@ Komponenty, są specjalnymi dyrektywami.
 [disabled]="!allowNewServer"
 (click)="onCreateServer()">Add Server</button>
 <!-- <p>{{serverCreationStatus}}</p> -->
-<p *ngIf="serverCreated; else noServer">Server was created, server name is {{serverName}}</p>
-<ng-template #noServer>
-  <p>No server was created</p>
-</ng-template>
-<app-server></app-server>
-<app-server></app-server>
+<p *ngIf="serverCreated">Server was created, server name is {{serverName}}</p>
+
+<app-server *ngFor="let server of servers"></app-server>
 
 <!-- <h2>Zadanie 2</h2>
 <input

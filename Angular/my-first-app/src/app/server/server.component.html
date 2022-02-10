@@ -1,4 +1,14 @@
 <!--Double curly braces is string interpolation syntax
 {{ between this is TypeScript expression }}
-I can call methods which return string in string interpolation syntax-->
-<p>{{'Server'}} with ID {{serverId}} is {{getServerStatus()}}</p>
+I can call methods which return string in string interpolation syntax
+
+Dyrektywy:
+structural: [ngStyle] - dyrektywa ngStyle połączona z property data binding pozwala na dynamiczną zminę wartości
+Można za jego pomocą dynamicznie zarządzać stylami.
+attribute: [ngClass] - pozwala na dynamiczne dodawnaie/usuwanie class z selektorów-->
+
+
+<p
+  [ngStyle]="{backgroundColor: getColor()}"
+  [ngClass]="{online: serverStatus == 'online'}">
+  Server with ID {{serverId}} is {{getServerStatus()}}</p>
