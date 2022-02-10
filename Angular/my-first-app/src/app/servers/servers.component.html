@@ -1,6 +1,53 @@
-<!-- Property binding - używa się, gdy chcę dynamicznie zmieniać wartości
-poperty bind syntax: [atribute to change]="changes"-->
+<!-- Property binding - używa się, gdy chcę dynamicznie zmieniać wartości Events, Directives, Other components
+poperty bind syntax: [atribute to change]="changes"
+W składni property binding musi znaleźć się kod TypeScript zrozumiały dla Angulara
+
+String interpolation działa tylko w kodzie normalnego template, w składni TypeScript powoduje problem
+Używa się tylko do wyświetlenia tekstu, można to zrobić za pomocą metody
+
+Property binding i String Interpolation to dwa sposoby na wyświetlanie danych w Template - dla użytkownika
+
+Two-way binding, połączenie event i property binding.
+
+(nameOfEventBinding) - event binding; nie powinny zawierać zbyt dużo logiki. Lepiej zrobić metodę, która przez zmianę jakiejś zmiennej bool będzie wywoływać wiele metod
+[nameOfPropetyBinding] - property binding
+[(nameOfDirective)] - two-way binding, połączenie event i property binding - następuje akcja event i bierząco zmienia informacje wraz z wysyłaniem ich do użytkownika
+
+Używam na tym etapie wszystkich 4 sposobów data binding:
+event - listen to the click,
+string interpolation - output data,
+property - enable button after time,
+two-way - fetch output data.
+-->
+
+
+<label>Server name</label>
+<!-- <input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)"> -->
+
+  <input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+
+<!-- <p>{{ serverName }}</p> -->
+
 <button class="btn btn-primary"
-[disabled]="!allowNewServer">Add Server</button>
-<app-server></app-server>
-<app-server></app-server>
+[disabled]="!allowNewServer"
+(click)="onCreateServer()">Add Server</button>
+<p>{{serverCreationStatus}}</p>
+
+<!-- <app-server></app-server> -->
+<h2>Zadanie 2</h2>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="userName">
+
+<p>{{userName}}</p>
+
+<button class="btn btn-primary"
+[disabled]="!userName"
+(click)="onUpdateUserName()">Input user</button>
