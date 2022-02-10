@@ -12,9 +12,9 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
   declarations: [
     AppComponent,
     ServerComponent,
-    ServersComponent,
-    WarningAlertComponent,
-    SuccessAlertComponent
+    ServersComponent
+    // WarningAlertComponent,
+    // SuccessAlertComponent
   ],
   imports: [
     BrowserModule,
